@@ -8,60 +8,79 @@
   <body>
     <h1>JavaScript Basic</h1>
     <script>
-      // 1
-      console.log(23 + 97);
-      // 2
-      console.log(10 + 20 + 30 + 40 + 50 + 60);
-      // 3
-      console.log((4 + 6 + 9) / 77);
-      // 4.1
-      let a = 10;
-      // 4.2
-      console.log(a);
-      // 4.3
-      a = 5;
-      console.log(a); // 5
-      // 4.4
-      let b = 7 * a; // 35
-      // 4.5
-      console.log(b);
+      // // 1
+      // console.log(23 + 97);
+      // // 2
+      // console.log(10 + 20 + 30 + 40 + 50 + 60);
+      // // 3
+      // console.log((4 + 6 + 9) / 77);
+      // // 4.1
+      // let a = 10;
+      // // 4.2
+      // console.log(a);
+      // // 4.3
+      // a = 5;
+      // console.log(a); // 5
+      // // 4.4
+      // let b = 7 * a; // 35
+      // // 4.5
+      // console.log(b);
 
-      // 5.1
-      const max = 57;
-      // 5.2
-      const actual = max - 13; // 44
-      // 5.3
-      const percentage = actual / max;
-      //  5.4
-      console.log(percentage);
+      // // 5.1
+      // const max = 57;
+      // // 5.2
+      // const actual = max - 13; // 44
+      // // 5.3
+      // const percentage = actual / max;
+      // //  5.4
+      // console.log(percentage);
 
-      // Function Basics
-      function add7(num) {
-        return num + 7;
+      // // Function Basics
+      // function add7(num) {
+      //   return num + 7;
+      // }
+
+      // function multiply(num1, num2) {
+      //   return num1 * num2;
+      // }
+
+      // function capitalize(string) {
+      //   // 最初の文字を切り出す
+      //   // 残りの文字を変数に格納
+      //   // toUpperCase()
+      //   // toLowerCase()
+      //   const firstChar = string.slice(0, 1);
+      //   const restChars = string.slice(1, string.length);
+      //   return firstChar.toUpperCase() + restChars.toLowerCase();
+      // }
+
+      // function lastLetter(string) {
+      //   return string.slice(-1);
+      // }
+
+      // console.log(add7(3));
+      // console.log(multiply(2, 6));
+      // console.log(capitalize("GoodMorning!"));
+      // console.log(lastLetter("Dude"));
+
+      // ユーザーの入力を受け取り、1から入力された数値までの数値を出力するプログラムを作成してください。ただし、3の倍数の場合はFizz数値ではなく を出力し、5の倍数の場合は を出力してくださいBuzz。3と5の両方の倍数の場合は を出力してくださいFizzBuzz。
+      function fizzBuzz() {
+        let answer = parseInt(
+          prompt("Please enter the number you would like to FizzBuzz up to: ")
+        );
+
+        for (let i = 1; i <= answer; i++) {
+          if (i % 3 == 0 && i % 5 == 0) {
+            console.log("FizzBuzz");
+          } else if (i % 5 == 0) {
+            console.log("Buzz");
+          } else if (i % 3 == 0) {
+            console.log("Fizz");
+          } else console.log(i);
+        }
       }
 
-      function multiply(num1, num2) {
-        return num1 * num2;
-      }
-
-      function capitalize(string) {
-        // 最初の文字を切り出す
-        // 残りの文字を変数に格納
-        // toUpperCase()
-        // toLowerCase()
-        const firstChar = string.slice(0, 1);
-        const restChars = string.slice(1, string.length);
-        return firstChar.toUpperCase() + restChars.toLowerCase();
-      }
-
-      function lastLetter(string) {
-        return string.slice(-1);
-      }
-
-      console.log(add7(3));
-      console.log(multiply(2, 6));
-      console.log(capitalize("GoodMorning!"));
-      console.log(lastLetter("Dude"));
+      fizzBuzz();
     </script>
   </body>
 </html>
