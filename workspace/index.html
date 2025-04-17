@@ -34,6 +34,34 @@
       const percentage = actual / max;
       //  5.4
       console.log(percentage);
+
+      // Function Basics
+      function add7(num) {
+        return num + 7;
+      }
+
+      function multiply(num1, num2) {
+        return num1 * num2;
+      }
+
+      function capitalize(string) {
+        // 最初の文字を切り出す
+        // 残りの文字を変数に格納
+        // toUpperCase()
+        // toLowerCase()
+        const firstChar = string.slice(0, 1);
+        const restChars = string.slice(1, string.length);
+        return firstChar.toUpperCase() + restChars.toLowerCase();
+      }
+
+      function lastLetter(string) {
+        return string.slice(-1);
+      }
+
+      console.log(add7(3));
+      console.log(multiply(2, 6));
+      console.log(capitalize("GoodMorning!"));
+      console.log(lastLetter("Dude"));
     </script>
   </body>
 </html>
